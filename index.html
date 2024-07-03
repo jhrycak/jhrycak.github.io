@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>JMH</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<style>
+/*=Title===============================================================*/
+.jumbotron {
+text-align: center;
+}
+
+
+/*=TOP NAVIGATION BAR=========================================================*/
+/* topnav bar*/
+.topnav {
+cursor: auto;
+overflow: hidden;				/*color phase 1*/
+background-color: #222;			/*topnav dark gray color: of bar itself, text color not needed*/
+float: top;
+height: 48px;
+}
+/* Style the topnav links */
+.topnav a {
+float: left;
+display: block;
+color: #fff;					/*change blue link color to white*/
+text-align: center;				/*background-color not needed, bar is already dark gray*/
+padding: 14px 16px;
+text-decoration: underline;
+transition: all 0.3s ease;
+}
+.topnav a:hover {
+background-color: #444;			/*color phase 2*/
+}
+.topnav a:active {
+background-color: #666;			/*color phase 3*/
+color: yellow;
+}
+
+
+.grey {
+  padding:60px;color: #222; background-color: #aaa; border-style: none; display : inline-block; width: 100%;
+}
+.white {
+  padding:60px;color: #222; background-color: #fff; border-style: none; display: inline-block; width: 100%;
+}
+.darkgrey {
+  padding:10px;color: #222; background-color: #aaa; border-style: none; width: 100%;
+}
+.darkgrey2 {
+  padding:60px;color: #222; background-color: #aaa; border-style: none; width: 100%;
+}
+.footer {
+  padding:60px;color: #fff; background-color: #222; border-style: none; display: inline-block; width: 100%;
+}
+
+/*==Four images============================================================================*/
+.twoimages { /*added for fourimages*/
+  padding-top:10px;
+  padding-bottom:30px;
+  color: #222; 
+  background-color: #fff;
+  max-width:1000px;
+}
+
+.imagerow{
+	padding:0%;
+}
+.imagecolumn2 {	/*columns for images*/
+  float: left;
+  width: 50%;
+  padding: 1%;
+  box-sizing: border-box;
+}
+.imagecontainer {
+  position: relative;
+  width: 100%;
+  background-color: #222;
+}
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .2s ease;
+  backface-visibility: hidden;
+}
+.imagetext {
+  transition: .2s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.imagecontainer:hover .image {
+  opacity: 0.3;
+}
+.imagecontainer:hover .imagetext {
+  opacity: 1;
+
+}
+
+/*==regular link boxes specifically for the four or six images===========================================*/
+a.text{
+  background-color: #222;
+  color: white;
+  padding: 14px 16px;
+  text-align: center;
+  text-decoration: underline;	
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+a.text:hover {
+  background-color: #444;
+  color: white;
+}
+a.text:active {
+  background-color: #666;
+  color: yellow;
+}
+
+
+.section2 {
+  padding-top:60px;height:300px;color: #222; background-color: #ccc; border-style: none; display: inline-block; width: 100%
+}
+.section3 {
+  padding-top:50px;height:350px;color: #222; background-color: #fff; border-style: none; display: inline-block; width: 100%
+}
+
+
+
+/*==============================================================================*/
+/*==============================================================================*/
+/*==============================================================================*/
+</style>
+
+
+
+
+
+
+
+
+<body>
+
+<nav class="topnav">
+    <a href="https://jhrycak.github.io">Home</a>
+    <a href="https://jhrycak.github.io/currentprojects">Current Projects</a>
+    <a href="https://jhrycak.github.io/pastprojects">Past Projects</a>
+    <a href="https://jhrycak.github.io/adventures">Adventures</a>
+	<a href="https://jhrycak.github.io/hobbies">Hobbies</a>
+  
+    <a href="https://jhrycak.github.io/aboutme" style="float:right">About Me</a>
+</nav>
+
+
+
+
+<div class="section2 jumbotron text-right">
+	<h1>JMH</h1>
+	<p>Jared Hrycak</p>          
+</div>
+
+
+
+
+<div class="twoimages container-fluid text-center">
+	<div class="imagerow">
+		<div class="imagecolumn2">
+			<div class="imagecontainer">
+				<img src="https://raw.githubusercontent.com/jhrycak/jhrycak.github.io/main/photos/ucr_edge.jpg" alt="Avatar" class="image" style="width:100%">
+				<div class="imagetext">
+				<div class="container-fluid text-center">
+					<a class="text" href="https://jhrycak.github.io/currentprojects">Current Projects</a> 
+				</div>
+				</div>
+			</div>
+		</div>
+        
+		<div class="imagecolumn2">
+			<div class="imagecontainer">
+				<img src="https://raw.githubusercontent.com/jhrycak/jhrycak.github.io/main/photos/EcoCAR_Presentation.jpg" alt="Avatar" class="image" style="width:100%">
+				<div class="imagetext">
+				<div class="container-fluid text-center">
+					<a class="text" href="https://jhrycak.github.io/pastprojects">Past Projects</a> 
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="twoimages container-fluid text-center">
+	<div class="imagerow">
+		
+		<div class="imagecolumn2">
+			<div class="imagecontainer">
+				<img src="https://raw.githubusercontent.com/jhrycak/jhrycak.github.io/main/photos/UCR_SRC.jpg" alt="lightning" class="image" style="width:100%">
+				
+				<div class="imagetext">
+				<div class="container-fluid text-center">
+					<a class="text" href="https://jhrycak.github.io/adventures">Adventures</a> 
+				</div>
+				</div>
+			
+			</div>
+		</div>
+	
+
+		<div class="imagecolumn2" style="float:right">
+			<div class="imagecontainer">
+				<img src="https://raw.githubusercontent.com/jhrycak/jhrycak.github.io/main/photos/JaredH.jpg" alt="Avatar" class="image" style="width:100%">
+				<div class="imagetext">
+				<div class="container-fluid text-center">
+					<a class="text" href="https://jhrycak.github.io/hobbies">About Me</a> 
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    
+</div>
+
+
+
+
+
+
+<div class="section2 jumbotron container-fluid text-center" >
+      <h3></h3>
+      <p style="max-width:800px; margin-right:auto; margin-left:auto;">
+      <br>
+      This is my website-profolio to provide a brief summary of myself.
+      </p>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="section3 jumbotron container-fluid text-center">
+	<h4></h4>
+      <p style="max-width:800px; margin-right:auto; margin-left:auto;">
+	  <br>
+      
+      </p>
+</div>
+
+
+
+
+
+
+<div class="footer container-fluid text-center">
+	<h4>Footer</h4>
+    <p></p>
+</div>
+
+
+
+
+</body>
+</html>
+
