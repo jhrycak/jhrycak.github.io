@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JMH</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<style>
+    /*=Title===============================================================*/
+    .jumbotron {
+        text-align: center;
+    }
+
+
+    /*=TOP NAVIGATION BAR=========================================================*/
+    /* topnav bar*/
+    .topnav {
+        cursor: auto;
+        overflow: hidden;
+        /*color phase 1*/
+        background-color: #222;
+        /*topnav dark gray color: of bar itself, text color not needed*/
+        float: top;
+        height: 48px;
+    }
+
+    /* Style the topnav links */
+    .topnav a {
+        float: left;
+        display: block;
+        color: #fff;
+        /*change blue link color to white*/
+        text-align: center;
+        /*background-color not needed, bar is already dark gray*/
+        padding: 14px 16px;
+        text-decoration: underline;
+        transition: all 0.3s ease;
+    }
+
+    .topnav a:hover {
+        background-color: #444;
+        /*color phase 2*/
+    }
+
+    .topnav a:active {
+        background-color: #666;
+        /*color phase 3*/
+        color: yellow;
+    }
+
+
+
+    /*==Four images============================================================================*/
+    .twoimages {
+        /*added for fourimages*/
+        padding-top: 10px;
+        padding-bottom: 30px;
+        color: #222;
+
+        max-width: 1000px;
+    }
+
+    .imagerow {
+        padding: 1%;
+    }
+
+    .imagecolumn2 {
+        /*columns for images*/
+        float: left;
+        width: 50%;
+        padding: 1%;
+        box-sizing: border-box;
+    }
+
+    .imagecontainer {
+        position: relative;
+        width: 100%;
+        background-color: #222;
+    }
+
+    .image {
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: .2s ease;
+        backface-visibility: hidden;
+    }
+
+    .imagetext {
+        transition: .2s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .imagecontainer:hover .image {
+        opacity: 0.3;
+    }
+
+    .imagecontainer:hover .imagetext {
+        opacity: 1;
+
+    }
+
+    /*==regular link boxes specifically for the four or six images===========================================*/
+    a.text {
+        background-color: #222;
+        color: white;
+        padding: 14px 16px;
+        text-align: center;
+        text-decoration: underline;
+        display: inline-block;
+        transition: all 0.2s ease;
+    }
+
+    a.text:hover {
+        background-color: #444;
+        color: white;
+    }
+
+    a.text:active {
+        background-color: #666;
+        color: yellow;
+    }
+
+
+    .section2 {
+        padding-top: 60px;
+        height: 300px;
+        color: #222;
+        background-color: #eee;
+        border-style: none;
+        display: inline-block;
+        width: 100%
+    }
+
+    .section3 {
+        padding-top: 50px;
+        height: 350px;
+        color: #222;
+        background-color: #fff;
+        border-style: none;
+        display: inline-block;
+        width: 100%
+    }
+
+
+    .grey {
+  padding:60px;color: #222; background-color: #aaa; border-style: none; display : inline-block; width: 100%;
+}
+.white {
+  padding:60px;color: #222; background-color: #fff; border-style: none; display: inline-block; width: 100%;
+}
+.darkgrey {
+  padding:10px;color: #222; background-color: #aaa; border-style: none; width: 100%;
+}
+.darkgrey2 {
+  padding:60px;color: #222; background-color: #aaa; border-style: none; width: 100%;
+}
+.footer {
+  padding:60px;color: #fff; background-color: #222; border-style: none; display: inline-block; width: 100%;
+}
+
+    .text2 {
+        color: #fff;
+    }
+
+
+
+    /*==============================================================================*/
+    /*==============================================================================*/
+    /*==============================================================================*/
+</style>
+
+
+
+
+
+
+
+
+<body>
+
+    <nav class="topnav">
+        <a href="https://jhrycak.github.io">Home</a>
+    <a href="https://jhrycak.github.io/projects">Projects</a>
+    <a href="https://jhrycak.github.io/adventures">Adventures</a>
+	<a href="https://jhrycak.github.io/hobbies">Hobbies</a>
+  
+    <a href="https://jhrycak.github.io/aboutme" style="float:right">About Me</a>
+      </nav>
+
+
+
+
+    <div class="grey jumbotron text-right">
+        <h2>Adventures</h2>
+      <p></p>
+    </div>
+    
+
+    <div id="project0" class="jumbotron" style="background-color:#fff;">
+        <h4></h4>
+        <p class="dropdown-title">
+            Things to see and places to be:
+        </p>
+    </div>
+
+
+    <div class="darkgrey container-fluid text-center"></div>
+
+    <div class="white containter-fluid">
+        <div class="twoimages container-fluid text-center">
+            <div class="imagerow">
+                <h3>
+                    Lake Placid
+                    <br><br>
+                </h3>
+
+                <div class="imagerow">
+                    <img src="https://raw.githubusercontent.com/jhrycak/jhrycak.github.io/main/photos/LP.jpeg"
+                        alt="Avatar" class="image" style="width:100%">
+                    <div class="imagetext">
+                        <p class="text2">Lake Placid</p>
+                    </div>
+                </div>
+                <br>
+                <p>
+                   2023
+                    <br><br>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="darkgrey container-fluid text-center"></div>
+
+    
+    <div class="white containter-fluid">
+        <div class="twoimages container-fluid text-center">
+            <div class="imagerow">
+                <h3>
+                    NYC/PHL/DC
+                    <br><br>
+                </h3>
+
+                <div class="imagecolumn2">
+                    <div class="imagecontainer">
+                        <img src="https://raw.githubusercontent.com/jhrycak/jhrycak.github.io/main/photos/View_of_NYC.jpeg"
+                            alt="lightning" class="image" style="width:100%">
+                        <div class="imagetext">
+                            <p class="text2">Eagle Rock Reservation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="imagecolumn2">
+                    <div class="imagecontainer">
+                        <img src="https://raw.githubusercontent.com/jhrycak/jhrycak.github.io/main/photos/NYC2.jpg"
+                            alt="Avatar" class="image" style="width:100%">
+                        <div class="imagetext">
+                            <p class="text2">One World Trade Center</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="imagecolumn2">
+                    <div class="imagecontainer">
+                        <img src="https://raw.githubusercontent.com/jhrycak/jhrycak.github.io/main/photos/Phili.jpg"
+                            alt="lightning" class="image" style="width:100%">
+                        <div class="imagetext">
+                            <p class="text2">Independence Hall</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="imagecolumn2">
+                    <div class="imagecontainer">
+                        <img src="https://raw.githubusercontent.com/jhrycak/jhrycak.github.io/main/photos/DC.jpg"
+                            alt="lightning" class="image" style="width:100%">
+                        <div class="imagetext">
+                            <p class="text2">United States Capitol</p>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                <p>
+                    2023
+                    <br><br>
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="darkgrey container-fluid text-center"></div>
+
+    <div class="white containter-fluid">
+        <div class="twoimages container-fluid text-center">
+            <div class="imagerow">
+                <h3>
+                    San Francisco
+                    <br><br>
+                </h3>
+
+                <div class="imagecolumn2">
+                    <div class="imagecontainer">
+                        <img src="https://raw.githubusercontent.com/jhrycak/jhrycak.github.io/main/photos/SF.jpeg"
+                            alt="lightning" class="image" style="width:100%">
+                        <div class="imagetext">
+                            <p class="text2">Palace of Fine Arts</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="imagecolumn2">
+                    <div class="imagecontainer">
+                        <img src="https://raw.githubusercontent.com/jhrycak/jhrycak.github.io/main/photos/SF2.jpeg"
+                            alt="Avatar" class="image" style="width:100%">
+                        <div class="imagetext">
+                            <p class="text2">Golden Gate Bridge</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                    2023
+                    <br><br>
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="darkgrey container-fluid text-center"></div>
+
+    <div class="white containter-fluid">
+        <div class="twoimages container-fluid text-center">
+            <div class="imagerow">
+                <h3>
+                    SoCal
+                    <br><br>
+                </h3>
+
+                <div class="imagecolumn2">
+                    <div class="imagecontainer">
+                        <img src="https://raw.githubusercontent.com/jhrycak/jhrycak.github.io/main/photos/LA.jpeg"
+                            alt="lightning" class="image" style="width:100%">
+                        <div class="imagetext">
+                            <p class="text2">Griffith Observatory</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="imagecolumn2">
+                    <div class="imagecontainer">
+                        <img src="https://raw.githubusercontent.com/jhrycak/jhrycak.github.io/main/photos/SD.jpeg"
+                            alt="Avatar" class="image" style="width:100%">
+                        <div class="imagetext">
+                            <p class="text2">La Jolla</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="imagecolumn2">
+                    <div class="imagecontainer">
+                        <img src="https://raw.githubusercontent.com/jhrycak/jhrycak.github.io/main/photos/OC.jpeg"
+                            alt="lightning" class="image" style="width:100%">
+                        <div class="imagetext">
+                            <p class="text2">Crystal Cove</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="imagecolumn2">
+                    <div class="imagecontainer">
+                        <img src="https://raw.githubusercontent.com/jhrycak/jhrycak.github.io/main/photos/SB.jpeg"
+                            alt="lightning" class="image" style="width:100%">
+                        <div class="imagetext">
+                            <p class="text2">Morton Peak</p>
+                        </div>
+                    </div>
+                </div>
+
+                    2023
+                    <br><br>
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="footer container-fluid text-center">
+        <h4>Footer</h4>
+        <!-- <p style="color: #fff;">text</p> -->
+    </div>
+
+
+
+
+</body>
+
+</html>
