@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>JMH</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<style>
+/*=Pideas Title===============================================================*/
+.jumbotron {
+text-align: center;
+}
+
+
+/*=TOP NAVIGATION BAR=========================================================*/
+/* topnav bar*/
+.topnav {
+cursor: auto;
+overflow: hidden;				/*color phase 1*/
+background-color: #222;			/*topnav dark gray color: of bar itself, text color not needed*/
+float: top;
+height: 48px;
+}
+/* Style the topnav links */
+.topnav a {
+float: left;
+display: block;
+color: #fff;					/*change blue link color to white*/
+text-align: center;				/*background-color not needed, bar is already dark gray*/
+padding: 14px 16px;
+text-decoration: underline;
+transition: all 0.3s ease;
+}
+.topnav a:hover {
+background-color: #444;			/*color phase 2*/
+}
+.topnav a:active {
+background-color: #666;			/*color phase 3*/
+color: yellow;
+}
+
+
+
+/*==dropdown box================================================================*/
+.dropbox {						
+  color: white;					/*text colors */
+  left:-50%;
+  position:relative; 
+  background-color: #222;		/*color phase 1*/
+  padding: 14px;
+  text-decoration: underline;	/*for dropdown link*/
+  border: none;
+  transition: all 0.3s ease;
+  min-width: 200%;
+  cursor: context-menu;
+}
+/*--original dropdown box----*/
+.dropdown-text {
+position: relative;				/*extreemely imporaant and annoying: text layout of topnav*/
+display: inline-block;			/*absolute for topnav!!! relative for text!!!*/
+}
+.dropdown-text:hover .dropbox {		/*button hovered when hovered. add ".dropbox" for any hovered*/
+background-color: #444;
+transition: all 0.3s ease;
+}
+.dropdown-text:hover .dropdown-content {	/*###_summons dropdown-content_###*/
+display: block;
+
+}
+
+/*--dropdown title ----------------------------------------------*/
+.dropdown-title {
+    max-width:800px; margin-right:auto; margin-left:auto;
+}
+
+
+
+
+/*.dropdown-text:active .dropbox {		button color when clicked. add ".dropbox" for any clicked}*/
+/*--extra content dropdown boxes-------------------------------*/
+.dropdown-content {
+ 
+  background-color: #666;		/*changes ONLY dropdown-text colors*/
+  left:-50%;
+  position:relative;
+  opacity: 100%;
+  display: none;			/*text: next-line organization*/
+  position: absolute;		/*position for dropnav: absolute for topnav!!! relative for text!!!*/
+  box-shadow: 0px 8px 16px;
+  min-width: 200%;
+  z-index: 1;
+}
+.dropdown-content a {
+  color: white;					/*changes BOTH topnav and text colors*/
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s ease;
+}
+.dropdown-content a:hover {		/*dropdown hovered*/
+background-color: #777;	
+}
+.dropdown-content a:active {	/*dropdown clicked*/
+color: yellow;						/*color phase 3*/
+background-color: #888;
+}
+/*-- dropdown box background----*/
+.dropdownbox {
+	width: 70%;
+  max-width: 600px;
+	padding: 10px;
+	background-color: #aaa;
+}
+
+
+/*==image column and image itself============================================================================*/
+.columnleft {				/*columns for images*/ 
+  float: left;
+  width: 50%;
+  padding: 1%;
+  box-sizing: border-box;
+}
+.columnright {				/*columns for images*/ 
+  float: right;
+  width: 50%;
+  padding: 1%;
+  box-sizing: border-box;
+}
+.image {                  /*image formatting*/
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .2s ease;
+  backface-visibility: hidden;
+}
+
+
+
+/*==paragraphs and bottom projects/sketches===========================================================================*/
+.grey {
+  padding:60px;color: #222; background-color: #aaa; border-style: none; display : inline-block; width: 100%;
+}
+.white {
+  padding:60px;color: #222; background-color: #fff; border-style: none; display: inline-block; width: 100%;
+}
+.darkgrey {
+  padding:10px;color: #222; background-color: #aaa; border-style: none; width: 100%;
+}
+.footer {
+  padding:60px;color: #fff; background-color: #222; border-style: none; display: inline-block; width: 100%;
+}
+
+
+a.text{
+  background-color: #222;
+  color: white;
+  padding: 14px 40px;
+  text-align: center;
+  text-decoration: underline;	
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+a.text:hover {
+  background-color: #444;
+  color: white;
+}
+
+a.text:active {
+  background-color: #666;
+  color: yellow;
+}
+
+
+a:link {
+  color: #fff;
+  cursor: default;
+}
+a:visited {
+  color: #fff;
+  background-color: transparent;
+  text-decoration: none;
+  cursor: default;
+}
+
+</style>
+
+
+
+
+
+
+
+<body>
+
+  <nav class="topnav">
+    <a href="https://jhrycak.github.io">Home</a>
+    <a href="https://jhrycak.github.io/projects">Projects</a>
+    <a href="https://jhrycak.github.io/adventures">Adventures</a>
+	  <a href="https://jhrycak.github.io/hobbies">Hobbies</a>
+  
+    <a href="https://jhrycak.github.io/aboutme" style="float:right">About Me</a>
+  </nav>
+
+
+
+
+<div class="grey jumbotron text-right">
+	<h2>Projects</h2>
+  <p></p>
+</div>
+
+
+<div class="white jumbotron">
+	<h4></h4>
+  
+	<p class="dropdown-title">
+	The latest projects I have been working on:  
+  </p>
+  <ep>(recent projects within the last year)<br><br></ep>
+
+
+  <div class="dropdownbox jumbotron container-fluid">
+
+		<div class="dropdown-text">
+			<button class="dropbox">Pick a project
+			<span class="caret"></span></a></button>
+			<div class="dropdown-content">
+      
+      <a href="#section0"><u>PrairieLearn</u></a>
+			<a href="#section1"><u>EcoCAR</u></a>
+      <a href="#section2"><u>EE 128</u></a>
+      </div>    
+		</div>
+	</div>  
+</div>
+
+
+<div class="darkgrey container-fluid text-center"></div>
+
+
+<div id="section0" class="grey container-fluid text-center">
+    <h3 style="margin-left:20px ">
+      PrairieLearn
+    </h3>
+  </div>
+  <div id="projectideas" class="white container-fluid">
+      <h4 style="margin-left:20px">
+        <div class="columnright">
+        	<img src="https://raw.githubusercontent.com/jhrycak/jhrycak.github.io/main/photos/PrairieLearn.png" alt="temp" class="image" style="width:100%">
+          <br>
+          
+          </div>
+        Worked on the PrairieLearn Summer Project under the UCR Computer Science and Engineering department.
+        <br><br>
+        I transferred the current corse instance from the PrairieLearn instance to the newly created UCR instance.
+        <br><br>
+        Then I came up with alternative question types which includes dropdown, integer input, and adding an embedded finite state machine and arduino encoder. 
+        <br><br>
+        I edited the current data base to reflect the best question type and made the formatting clearer by adding styling elements.
+        <br><br>
+        Additionaly, I was tasked to expand upon the current database of questions by adding variants and new questions.
+      
+    </h4>
+  </div>
+</div>
+
+
+<div id="section1" class="grey container-fluid text-center">
+  <h3 style="margin-left:20px ">
+    EcoCAR
+  </h3>
+</div>
+
+
+<div id="projectideas" class="white container-fluid">
+  <h4 style="margin-left:20px">
+    
+    <div class="columnright">
+      <img src="https://raw.githubusercontent.com/jhrycak/jhrycak.github.io/main/photos/EcoCAR_Presentation.jpg" alt="temp" class="image" style="width:100%">
+      <br>
+      <img src="https://raw.githubusercontent.com/jhrycak/jhrycak.github.io/main/photos/EcoCAR.jpeg" alt="temp" class="image" style="width:100%">
+      <br>
+      </div>
+
+      Prototyped an Autonomous Intersection Navigation system to enable the student designed General Motors LYRIQ to traverse a signalized intersection in a safe and energy efficient manner by leveraging signal phase and timing information in Matlab/Simulink.
+    <br><br><br>
+      Presented at the year two competition in Phoenix, AZ to a panel of judges regarding the longitudinal control progress of the Autonomous Intersection Navigation system.
+  </h4>
+</div>
+
+<div id="section2" class="grey container-fluid text-center">
+  <h3 style="margin-left:20px ">
+    EE 128
+  </h3>
+</div>
+
+
+<div id="projectideas" class="white container-fluid">
+  <h4 style="margin-left:20px">
+    
+    <div class="columnright">
+      <img src="https://raw.githubusercontent.com/jhrycak/jhrycak.github.io/main/photos/Mini_Project.png" alt="temp" class="image" style="width:100%">
+      <br>
+      <img src="https://raw.githubusercontent.com/jhrycak/jhrycak.github.io/main/photos/Block_Diagram.png" alt="temp" class="image" style="width:100%">
+      <br>
+      <img src="https://raw.githubusercontent.com/jhrycak/jhrycak.github.io/main/photos/Software_Flowchart.png" alt="temp" class="image" style="width:100%">
+      <br>
+      </div>
+
+      The scope of this project is to implement a working lock utilizing the K64F microcontroller to turn a stepper motor by receiving a pulse width modulation signal from the Arduino microcontroller using input capture. 
+      <br><br><br>
+      The Arduino provides a pulse width modulation signal based on the number of correct code inputs. 
+      <br><br><br>
+      The inputs are determined using a potentiometer to set a number which is displayed on a 7 segment display and a button to enter the number. 
+      <br><br><br>
+      Once the correct combination is entered, the corresponding pulse width modulation signal unlocks the lock on the K64F. 
+      <br><br><br>
+      The K64F then counts down from ten until it automatically locks and resets the Arduino. 
+      <br><br><br>
+      The countdown is displayed on another 7 segment display.
+  </h4>
+</div>
+
+
+<div class="footer container-fluid text-center">
+  <h4>Footer</h4>
+  <!-- <p style="color: #fff;">text</p> -->
+</div>
+
+
+
+
+</body>
+</html>
+
